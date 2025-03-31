@@ -16,15 +16,15 @@ return {
 			-- vim
 			lua = { "stylua" },
 			-- web
-			json = { "prettierd" },
-			html = { "prettierd" },
-			css = { "prettierd" },
-			scss = { "prettierd" },
-			javascript = { "prettierd" },
-			typescript = { "prettierd" },
-			vue = { "prettierd" },
+			json = { "prettier" },
+			html = { "prettier" },
+			css = { "prettier" },
+			scss = { "prettier" },
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			vue = { "prettier" },
 			-- other
-			yaml = { "prettierd" },
+			yaml = { "prettier" },
 		},
 	},
 }

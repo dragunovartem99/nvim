@@ -16,7 +16,7 @@ local servers = {
 
 local tools = {
 	"stylua",
-	"prettierd",
+	"prettier",
 }
 
 return {
