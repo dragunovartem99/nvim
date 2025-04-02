@@ -1,6 +1,9 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
+		-- Show inline diagnostic
+		vim.diagnostic.config({ virtual_text = true })
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("custom-lsp-attach", { clear = true }),
 			callback = function(event)
