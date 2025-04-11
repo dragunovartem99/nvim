@@ -1,4 +1,4 @@
--- Color support
+-- Color support (xterm, tmux)
 vim.opt.termguicolors = true
 
 -- Line numbers
