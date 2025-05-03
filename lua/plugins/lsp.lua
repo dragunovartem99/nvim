@@ -25,7 +25,7 @@ return {
 					"[G]oto [I]mplementation"
 				)
 
-				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+				map("<leader>r", vim.lsp.buf.rename, "[R]ename")
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 
 				map(

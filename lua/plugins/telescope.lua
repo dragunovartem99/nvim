@@ -13,6 +13,7 @@ return {
 		end
 
 		map("fh", "[F]ind [H]elp", "help_tags")
+		map("fk", "[F]ind [K]eymaps", "keymaps")
 
 		-- Debug
 
