@@ -12,24 +12,31 @@ return {
 			end, { desc = "Telescope: " .. desc })
 		end
 
-		-- Unique
-
 		map("fh", "[F]ind [H]elp", "help_tags")
-		map("fg", "[F]ind [G]rep", "live_grep")
-		map("fv", "[F]ind [V]CS", "git_files")
-		map("fr", "[F]ind [R]esume", "resume")
 
-		-- Basics
+		-- Debug
+
+		map("fd", "[F]ind [D]iagnostics", "diagnostics")
+
+		-- "Everyday" Search
 
 		map("ff", "[F]ind [F]iles", "find_files")
+		map("fv", "[F]ind [V]CS", "git_files")
+		map("fg", "[F]ind [G]rep", "live_grep")
+
+		-- Time Travelling
+
+		map("fo", "[F]ind [O]ld Files", "oldfiles")
+		map("fr", "[F]ind [R]esume", "resume")
+
+		-- Rare Cases
+
 		map("fa", "[F]ind [A]ll", "find_files", {
 			hidden = true,
 			no_ignore = true,
 			no_ignore_parent = true,
 			prompt_title = "Find Files (All)",
 		})
-
-		-- Neovim
 
 		map(
 			"fn",
