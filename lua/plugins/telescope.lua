@@ -22,27 +22,11 @@ return {
 		-- Basics
 
 		map("ff", "[F]ind [F]iles", "find_files")
-		map(
-			"fa",
-			"[F]ind [A]ll",
-			"find_files",
-			{ hidden = true, prompt_title = "Find Files (All)" }
-		)
-
-		-- Ignored modifier
-
-		map(
-			"fi",
-			"[F]ind [I]gnored",
-			"find_files",
-			{ no_ignore = true, no_ignore_parent = true, prompt_title = "Find Ignored Files" }
-		)
-
-		map("fia", "[F]ind [I]gnored [A]ll", "find_files", {
+		map("fa", "[F]ind [A]ll", "find_files", {
 			hidden = true,
 			no_ignore = true,
 			no_ignore_parent = true,
-			prompt_title = "Find Ignored Files (All)",
+			prompt_title = "Find Files (All)",
 		})
 
 		-- Neovim
