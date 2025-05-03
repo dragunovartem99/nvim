@@ -22,7 +22,12 @@ return {
 		-- Basics
 
 		map("ff", "[F]ind [F]iles", "find_files")
-		map("fa", "[F]ind [A]ll", "find_files", { hidden = true, prompt_title = "Find Files (All)" })
+		map(
+			"fa",
+			"[F]ind [A]ll",
+			"find_files",
+			{ hidden = true, prompt_title = "Find Files (All)" }
+		)
 
 		-- Ignored modifier
 

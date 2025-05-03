@@ -36,7 +36,8 @@ return {
 			handlers = {
 				function(server_name)
 					local server = servers[server_name]
-					server.capabilities = require("blink.cmp").get_lsp_capabilities(server.capabilities)
+					server.capabilities =
+						require("blink.cmp").get_lsp_capabilities(server.capabilities)
 					require("lspconfig")[server_name].setup(server)
 				end,
 			},
