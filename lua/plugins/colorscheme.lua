@@ -1,6 +1,6 @@
 return {
-	"rafi/awesome-vim-colorschemes",
+	"HoNamDuong/hybrid.nvim",
 	config = function()
-		vim.cmd.colorscheme("hybrid_reverse")
+		vim.cmd.colorscheme("hybrid")
 	end
 }
