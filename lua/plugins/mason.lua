@@ -17,6 +17,7 @@ local servers = {
 local tools = {
 	"stylua",
 	"prettier",
+	"shfmt",
 }
 
 return {
@@ -24,8 +25,8 @@ return {
 	dependencies = {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		"williamboman/mason-lspconfig.nvim",
-		"saghen/blink.cmp",
 		"neovim/nvim-lspconfig",
+		"saghen/blink.cmp",
 	},
 	config = function()
 		require("mason").setup()

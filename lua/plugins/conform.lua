@@ -13,8 +13,10 @@ return {
 	},
 	opts = {
 		formatters_by_ft = {
-			-- vim
+			-- nvim
 			lua = { "stylua" },
+			-- linux
+			sh = { "shfmt" },
 			-- web
 			json = { "prettier" },
 			html = { "prettier" },
@@ -25,6 +27,17 @@ return {
 			vue = { "prettier" },
 			-- other
 			yaml = { "prettier" },
+		},
+		formatters = {
+			prettier = {
+				prepend_args = {
+					"--print-width 100",
+					"--tab-width 4",
+					"--use-tabs",
+					"--trailing-comma es5",
+				},
+			},
+			shfmt = { prepend_args = { "-ci" } },
 		},
 	},
 }
