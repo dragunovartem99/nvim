@@ -1,3 +1,7 @@
+-- https://github.com/vuejs/language-tools
+local vue_lsp_location = vim.fn.stdpath("data")
+	.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+
 local servers = {
 	-- nvim
 	lua_ls = {},
@@ -7,18 +11,22 @@ local servers = {
 	-- web
 	emmet_language_server = {},
 	cssls = {},
-	ts_ls = {},
-	volar = {
-		filetypes = { "vue" },
-		init_options = { vue = { hybridMode = false } },
+	ts_ls = {
+		init_options = {
+			plugins = {
+				{
+					name = "@vue/typescript-plugin",
+					location = vue_lsp_location,
+					languages = { "vue" },
+				},
+			},
+		},
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	},
+	volar = {},
 }
 
-local tools = {
-	"stylua",
-	"prettier",
-	"shfmt",
-}
+local tools = { "stylua", "prettier", "shfmt" }
 
 return {
 	"williamboman/mason.nvim",
