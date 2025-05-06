@@ -26,7 +26,7 @@ local servers = {
 	volar = {},
 }
 
-local tools = { "stylua", "prettier", "shfmt" }
+local tools = { "stylua", "prettier", "shfmt", "clang-format" }
 
 return {
 	"williamboman/mason.nvim",
