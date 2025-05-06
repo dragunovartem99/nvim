@@ -37,7 +37,7 @@ return {
 					"--trailing-comma es5",
 				},
 			},
-			shfmt = { prepend_args = { "-ci" } },
+			shfmt = { prepend_args = { "-ci", "-sr" } },
 		},
 	},
 }
