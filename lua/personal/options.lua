@@ -1,6 +1,9 @@
 -- Color support (xterm, tmux)
 vim.opt.termguicolors = true
 
+-- Use C syntax for `*.h` files
+vim.g.c_syntax_for_h = 1
+
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
