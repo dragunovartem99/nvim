@@ -1,3 +1,7 @@
+local filetypes = require("config.formatters.filetypes")
+local prettier = require("config.formatters.prettier");
+local clang_format = require("config.formatters.clang_format");
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -25,45 +29,10 @@ return {
 		},
 	},
 	opts = {
-		formatters_by_ft = {
-			-- nvim
-			lua = { "stylua" },
-			-- linux
-			c = { "clang-format" },
-			sh = { "shfmt" },
-			-- web
-			json = { "prettier" },
-			html = { "prettier" },
-			css = { "prettier" },
-			scss = { "prettier" },
-			javascript = { "prettier" },
-			typescript = { "prettier" },
-			vue = { "prettier" },
-			-- other
-			yaml = { "prettier" },
-		},
+		formatters_by_ft = filetypes,
 		formatters = {
-			prettier = {
-				-- https://prettier.io/docs/cli
-				prepend_args = {
-					"--print-width 100",
-					"--tab-width 4",
-					"--use-tabs",
-					"--trailing-comma es5",
-				},
-			},
-			["clang-format"] = {
-				-- https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-				prepend_args = {
-					"--style={ "
-						.. "BasedOnStyle: llvm, "
-						.. "UseTab: Always, "
-						.. "IndentWidth: 4, "
-						.. "TabWidth: 4, "
-						.. "Cpp11BracedListStyle: false"
-						.. " }",
-				},
-			},
+			prettier = prettier,
+			["clang-format"] = clang_format,
 			shfmt = {
 				-- https://github.com/patrickvane/shfmt
 				prepend_args = { "-ci", "-sr" },
