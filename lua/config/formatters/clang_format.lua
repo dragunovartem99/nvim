@@ -1,5 +1,5 @@
+-- https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 return {
-	-- https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 	prepend_args = {
 		"--style={ "
 			.. "BasedOnStyle: llvm, "

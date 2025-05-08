@@ -1,5 +1,5 @@
+-- https://prettier.io/docs/cli
 return {
-	-- https://prettier.io/docs/cli
 	prepend_args = {
 		"--print-width 100",
 		"--tab-width 4",

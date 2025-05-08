@@ -1,6 +1,6 @@
 local filetypes = require("config.formatters.filetypes")
-local prettier = require("config.formatters.prettier");
-local clang_format = require("config.formatters.clang_format");
+local prettier = require("config.formatters.prettier")
+local clang_format = require("config.formatters.clang_format")
 
 return {
 	"stevearc/conform.nvim",
