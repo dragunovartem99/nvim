@@ -6,5 +6,5 @@ vim.keymap.set(
 	"n",
 	"gcx",
 	"<cmd>!cd %:h && gcc %:t -o %:t:r && ./%:t:r && rm %:t:r<CR>",
-	{ desc = "[G]CC [C] [E]xecution" }
+	{ desc = "[G][C]C E[x]ecution" }
 )
