@@ -24,6 +24,7 @@ local servers = {
 		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	},
 	volar = {},
+	eslint = {},
 }
 
 local tools = { "stylua", "prettier", "shfmt", "clang-format" }
