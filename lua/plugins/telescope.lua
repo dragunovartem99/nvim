@@ -5,17 +5,18 @@ return {
 		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	config = function()
-		require("telescope").setup({
+		local telescope = require("telescope")
+		local builtin = require("telescope.builtin")
+
+		telescope.setup({
 			extensions = { ["ui-select"] = { require("telescope.themes").get_dropdown() } },
 		})
 
-		pcall(require("telescope").load_extension, "ui-select")
+		pcall(telescope.load_extension, "ui-select")
 
-		local builtin = require("telescope.builtin")
-
-		local map = function(keys, desc, method, opts)
+		local map = function(keys, desc, method_name, opts)
 			vim.keymap.set("n", "<leader>" .. keys, function()
-				builtin[method](opts)
+				builtin[method_name](opts)
 			end, { desc = "Telescope: " .. desc })
 		end
 

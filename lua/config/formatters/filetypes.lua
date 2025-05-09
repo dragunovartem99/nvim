@@ -1,4 +1,4 @@
--- Formatters by file type
+-- Formatters by filetype
 return {
 	-- nvim
 	lua = { "stylua" },

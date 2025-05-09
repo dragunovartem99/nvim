@@ -1,33 +1,4 @@
--- https://github.com/vuejs/language-tools
-local vue_lsp_location = vim.fn.stdpath("data")
-	.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
-
-local servers = {
-	-- nvim
-	lua_ls = {},
-	-- linux
-	clangd = {},
-	bashls = {},
-	-- web
-	emmet_language_server = {},
-	cssls = {},
-	ts_ls = {
-		init_options = {
-			plugins = {
-				{
-					name = "@vue/typescript-plugin",
-					location = vue_lsp_location,
-					languages = { "vue" },
-				},
-			},
-		},
-		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-	},
-	volar = {},
-	eslint = {},
-}
-
-local tools = { "stylua", "prettier", "shfmt", "clang-format" }
+local servers = require("config.lsps.list")
 
 return {
 	"williamboman/mason.nvim",
@@ -39,7 +10,9 @@ return {
 	},
 	config = function()
 		require("mason").setup()
-		require("mason-tool-installer").setup({ ensure_installed = tools })
+		require("mason-tool-installer").setup({
+			ensure_installed = require("config.formatters.list"),
+		})
 		require("mason-lspconfig").setup({
 			ensure_installed = vim.tbl_keys(servers),
 			automatic_installation = true,

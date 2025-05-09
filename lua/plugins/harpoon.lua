@@ -7,8 +7,8 @@ return {
 		local ui = require("harpoon.ui")
 		local mark = require("harpoon.mark")
 
-		local map = function(keys, desc, method)
-			vim.keymap.set("n", "<leader>" .. keys, method, { desc = "Harpoon: " .. desc })
+		local map = function(keys, desc, callback)
+			vim.keymap.set("n", "<leader>" .. keys, callback, { desc = "Harpoon: " .. desc })
 		end
 
 		map("hh", "[H]arpoon", ui.toggle_quick_menu)

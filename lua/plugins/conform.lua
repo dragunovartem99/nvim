@@ -1,7 +1,3 @@
-local filetypes = require("config.formatters.filetypes")
-local prettier = require("config.formatters.prettier")
-local clang_format = require("config.formatters.clang_format")
-
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -29,10 +25,10 @@ return {
 		},
 	},
 	opts = {
-		formatters_by_ft = filetypes,
+		formatters_by_ft = require("config.formatters.filetypes"),
 		formatters = {
-			prettier = prettier,
-			["clang-format"] = clang_format,
+			prettier = require("config.formatters.prettier"),
+			["clang-format"] = require("config.formatters.clang-format"),
 			shfmt = {
 				-- https://github.com/patrickvane/shfmt
 				prepend_args = { "-ci", "-sr" },
