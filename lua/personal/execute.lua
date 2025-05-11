@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader><enter>", function()
+vim.keymap.set("n", "<leader>x", function()
 	local type = vim.bo.filetype
 	local content = vim.fn.expand("%")
 
@@ -18,4 +18,4 @@ vim.keymap.set("n", "<leader><enter>", function()
 	else
 		print("Cannot execute " .. type .. " file!")
 	end
-end, { desc = "Execute" })
+end, { desc = "E[x]ecute" })
