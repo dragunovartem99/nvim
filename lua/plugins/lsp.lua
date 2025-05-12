@@ -18,10 +18,10 @@ return {
 					)
 				end
 
-				map("td", "lsp_definitions", "[T]o [D]efinitions")
-				map("tt", "lsp_type_definitions", "[T]o [T]ypes")
-				map("tr", "lsp_references", "[T]o [R]eferences")
-				map("ti", "lsp_implementations", "[T]o [I]mplementations")
+				map("grd", "lsp_definitions", "[G]oto [D]efinitions")
+				map("grt", "lsp_type_definitions", "[G]oto [T]ypes")
+				map("grr", "lsp_references", "[G]oto [R]eferences")
+				map("gri", "lsp_implementations", "[G]oto [I]mplementations")
 				map("<leader>sd", "lsp_document_symbols", "[S]ymbols in [D]ocument")
 				map("<leader>sw", "lsp_dynamic_workspace_symbols", "[S]ymbols in [W]orkspace")
 			end,
