@@ -15,6 +15,8 @@ vim.keymap.set("n", "<leader>x", function()
 		run("ts-node " .. content)
 	elseif type == "sh" then
 		run("bash " .. content)
+	elseif type == "lua" then
+		vim.cmd("luafile " .. content)
 	else
 		print("Cannot execute " .. type .. " file!")
 	end
