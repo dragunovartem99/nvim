@@ -23,6 +23,6 @@ return {
 		},
 		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	},
-	volar = {},
+	vue_ls = {},
 	eslint = {},
 }
