@@ -1,3 +1,6 @@
+-- Show inline diagnostic
+vim.diagnostic.config({ virtual_text = true })
+
 -- Color support (xterm, tmux)
 vim.opt.termguicolors = true
 

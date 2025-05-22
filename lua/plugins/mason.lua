@@ -1,18 +1,15 @@
 local servers = require("config.lsps.list")
+local formatters = require("config.formatters.list")
 
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason-lspconfig.nvim",
 	dependencies = {
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		"williamboman/mason-lspconfig.nvim",
+		{ "mason-org/mason.nvim", opts = {} },
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim", opts = { ensure_installed = formatters } },
 		"neovim/nvim-lspconfig",
 		"saghen/blink.cmp",
 	},
 	config = function()
-		require("mason").setup()
-		require("mason-tool-installer").setup({
-			ensure_installed = require("config.formatters.list"),
-		})
 		require("mason-lspconfig").setup({
 			ensure_installed = vim.tbl_keys(servers),
 			automatic_installation = true,
