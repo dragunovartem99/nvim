@@ -18,7 +18,7 @@ return {
 					local server = servers[server_name]
 					server.capabilities =
 						require("blink.cmp").get_lsp_capabilities(server.capabilities)
-					require("lspconfig")[server_name].setup(server)
+					vim.lsp.config(server_name, server)
 				end,
 			},
 		})
