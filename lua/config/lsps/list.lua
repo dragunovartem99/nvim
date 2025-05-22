@@ -1,6 +1,7 @@
 -- https://github.com/vuejs/language-tools
-local vue_lsp_location = vim.fn.stdpath("data")
-	.. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+local vue_lsp_location = vim.fn.expand("$MASON/packages")
+	.. "/vue-language-server"
+	.. "/node_modules/@vue/language-server"
 
 return {
 	-- nvim
