@@ -12,7 +12,12 @@ vim.keymap.set("n", "<leader>x", function()
 	elseif type == "javascript" then
 		run("node " .. content)
 	elseif type == "typescript" then
-		run("node --disable-warning=ExperimentalWarning --experimental-strip-types " .. content)
+		run(
+			"node "
+				.. "--experimental-strip-types "
+				.. "--disable-warning=ExperimentalWarning "
+				.. content
+		)
 	elseif type == "sh" then
 		run("bash " .. content)
 	elseif type == "lua" then
