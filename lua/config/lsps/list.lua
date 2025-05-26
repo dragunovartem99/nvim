@@ -9,11 +9,7 @@ return {
 	cssls = {},
 	vue_ls = {
 		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-		init_options = {
-			vue = {
-				hybridMode = false,
-			},
-		},
+		init_options = { vue = { hybridMode = false } },
 	},
 	eslint = {},
 }
