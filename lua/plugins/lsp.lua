@@ -10,7 +10,6 @@ return {
 	},
 	config = function()
 		for server_name, config in pairs(servers) do
-			vim.lsp.enable(server_name)
 			vim.lsp.config(server_name, config)
 		end
 	end,
