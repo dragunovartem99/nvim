@@ -1,8 +1,3 @@
--- https://github.com/vuejs/language-tools
-local vue_lsp_location = vim.fn.expand("$MASON/packages")
-	.. "/vue-language-server"
-	.. "/node_modules/@vue/language-server"
-
 return {
 	-- nvim
 	lua_ls = {},
@@ -12,18 +7,13 @@ return {
 	-- web
 	emmet_language_server = {},
 	cssls = {},
-	ts_ls = {
+	vue_ls = {
+		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 		init_options = {
-			plugins = {
-				{
-					name = "@vue/typescript-plugin",
-					location = vue_lsp_location,
-					languages = { "vue" },
-				},
+			vue = {
+				hybridMode = false,
 			},
 		},
-		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 	},
-	vue_ls = {},
 	eslint = {},
 }
