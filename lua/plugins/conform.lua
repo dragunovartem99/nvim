@@ -29,10 +29,7 @@ return {
 		formatters = {
 			prettier = require("config.formatters.prettier"),
 			["clang-format"] = require("config.formatters.clang-format"),
-			shfmt = {
-				-- https://github.com/patrickvane/shfmt
-				prepend_args = { "-ci", "-sr" },
-			},
+			shfmt = require("config.formatters.shfmt"),
 		},
 	},
 }
