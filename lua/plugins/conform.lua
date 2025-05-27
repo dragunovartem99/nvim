@@ -27,9 +27,9 @@ return {
 	opts = {
 		formatters_by_ft = require("config.formatters.filetypes"),
 		formatters = {
-			prettier = require("config.formatters.prettier"),
+			["prettier"] = require("config.formatters.prettier"),
 			["clang-format"] = require("config.formatters.clang-format"),
-			shfmt = require("config.formatters.shfmt"),
+			["shfmt"] = require("config.formatters.shfmt"),
 		},
 	},
 }
