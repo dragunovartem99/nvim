@@ -1,4 +1,4 @@
--- https://prettier.io/docs/cli
+-- https://prettier.io/docs/options
 return {
 	prepend_args = {
 		"--print-width 100",
