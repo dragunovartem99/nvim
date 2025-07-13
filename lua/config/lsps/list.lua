@@ -7,9 +7,7 @@ return {
 	-- web
 	emmet_language_server = {},
 	cssls = {},
-	vue_ls = {
-		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-		init_options = { vue = { hybridMode = false } },
-	},
+	vtsls = require("config.lsps.vtsls"),
+	vue_ls = require("config.lsps.vue_ls"),
 	eslint = {},
 }
