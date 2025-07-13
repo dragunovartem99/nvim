@@ -12,6 +12,5 @@ return {
 		for server_name, config in pairs(servers) do
 			vim.lsp.config(server_name, config)
 		end
-		vim.lsp.enable({ "vtsls", "vue_ls" })
 	end,
 }
