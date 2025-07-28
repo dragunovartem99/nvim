@@ -30,5 +30,6 @@ vim.opt.clipboard = "unnamedplus"
 -- Ignore case
 vim.opt.ignorecase = true
 
--- Undofile
+-- Temporary files
 vim.opt.undofile = true
+vim.opt.swapfile = false
