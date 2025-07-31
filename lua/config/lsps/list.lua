@@ -10,4 +10,5 @@ return {
 	vue_ls = {},
 	vtsls = require("config.lsps.vtsls"),
 	eslint = {},
+	stylelint_lsp = {},
 }
