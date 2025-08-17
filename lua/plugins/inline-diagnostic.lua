@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("tiny-inline-diagnostic").setup({
-			preset = "nonerdfont",
+			preset = "minimal",
 			options = {
 				multilines = {
 					enabled = true,
