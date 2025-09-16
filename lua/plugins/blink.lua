@@ -11,7 +11,7 @@ return {
 		-- C-e: Hide menu
 		keymap = { preset = "default" },
 		appearance = { nerd_font_variant = "mono" },
-		fuzzy = { implementation = "prefer_rust_with_warning" },
+		fuzzy = { implementation = "lua" },
 
 		-- C-k: Toggle signature help (if signature.enabled = true)
 		signature = { enabled = true },
