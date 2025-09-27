@@ -8,8 +8,8 @@ return {
 			options = {
 				multilines = {
 					enabled = true,
-				}
-			}
+				},
+			},
 		})
 	end,
 }
