@@ -14,6 +14,7 @@ return {
 	"javascript",
 	"typescript",
 	"vue",
+	"graphql",
 	-- other
 	"query",
 	"markdown",
