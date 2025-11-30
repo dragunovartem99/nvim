@@ -20,6 +20,8 @@ vim.keymap.set("n", "<leader>x", function()
 		)
 	elseif type == "sh" then
 		run("bash " .. content)
+	elseif type == "python" then
+		run("python3 " .. content)
 	elseif type == "lua" then
 		vim.cmd("luafile " .. content)
 	else
