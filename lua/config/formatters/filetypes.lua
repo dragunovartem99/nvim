@@ -7,6 +7,7 @@ return {
 	sh = { "shfmt" },
 	-- web
 	json = { "prettier" },
+	jsonc = { "prettier" },
 	html = { "prettier" },
 	css = { "prettier" },
 	scss = { "prettier" },
