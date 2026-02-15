@@ -7,8 +7,8 @@ return {
 	-- web
 	emmet_language_server = {},
 	cssls = {},
+	ts_ls = require("config.lsps.ts_ls"),
 	vue_ls = {},
-	vtsls = require("config.lsps.vtsls"),
+	stylelint_lsp = require("config.lsps.stylelint_lsp"),
 	eslint = {},
-	stylelint_lsp = require("config.lsps.stylelint-lsp"),
 }

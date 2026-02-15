@@ -12,6 +12,6 @@ local vue_plugin = {
 }
 
 return {
-	settings = { vtsls = { tsserver = { globalPlugins = { vue_plugin } } } },
+	init_options = { plugins = { vue_plugin } },
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 }
