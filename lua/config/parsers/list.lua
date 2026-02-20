@@ -3,9 +3,11 @@ return {
 	"vim",
 	"vimdoc",
 	"lua",
+
 	-- linux
 	"c",
 	"bash",
+
 	-- web
 	"json",
 	"html",
@@ -15,6 +17,8 @@ return {
 	"typescript",
 	"vue",
 	"graphql",
+	"glimmer",
+
 	-- other
 	"query",
 	"markdown",

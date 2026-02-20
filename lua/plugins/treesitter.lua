@@ -5,6 +5,12 @@ return {
 
 		require("nvim-treesitter").install(filetypes)
 
+		vim.filetype.add({
+			extension = {
+				hbs = "glimmer",
+			},
+		})
+
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = filetypes,
 			callback = function()
