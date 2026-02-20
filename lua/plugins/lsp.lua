@@ -14,8 +14,10 @@ return {
 		end
 
 		vim.api.nvim_create_autocmd("LspAttach", {
-			callback = function(args)
-				local client = vim.lsp.get_client_by_id(args.data.client_id)
+			callback = function(event)
+				local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+				-- ./treesitter.lua - better and faster than LSP tokens
 				client.server_capabilities.semanticTokensProvider = nil
 			end,
 		})

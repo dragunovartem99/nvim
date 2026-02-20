@@ -2,9 +2,11 @@
 return {
 	-- nvim
 	lua = { "stylua" },
+
 	-- linux
 	c = { "clang-format" },
 	sh = { "shfmt" },
+
 	-- web
 	json = { "prettier" },
 	jsonc = { "prettier" },
@@ -14,6 +16,7 @@ return {
 	javascript = { "prettier" },
 	typescript = { "prettier" },
 	vue = { "prettier" },
+
 	-- other
 	yaml = { "prettier" },
 }
