@@ -1,6 +1,12 @@
 return {
+	-- nvim
 	"stylua",
-	"prettier",
-	"shfmt",
+
+	-- linux
 	"clang-format",
+	"shfmt",
+	"shellcheck",
+
+	-- web
+	"prettier",
 }
