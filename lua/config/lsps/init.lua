@@ -1,6 +1,7 @@
 return {
 	-- nvim
 	lua_ls = require("config.lsps.lua_ls"),
+	stylua = {},
 
 	-- linux
 	clangd = {},

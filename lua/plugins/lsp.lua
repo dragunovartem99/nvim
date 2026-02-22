@@ -1,12 +1,15 @@
-local servers = require("config.lsps.list")
-local formatters = require("config.formatters.list")
+local servers = require("config.lsps")
+local formatters = require("config.formatters")
 
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
 		{ "mason-org/mason-lspconfig.nvim", opts = { ensure_installed = vim.tbl_keys(servers) } },
-		{ "WhoIsSethDaniel/mason-tool-installer.nvim", opts = { ensure_installed = formatters } },
+		{
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			opts = { ensure_installed = vim.tbl_keys(formatters) },
+		},
 	},
 	config = function()
 		for server_name, config in pairs(servers) do
