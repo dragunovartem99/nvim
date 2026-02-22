@@ -9,7 +9,6 @@ return {
 	"bash",
 
 	-- web
-	"json",
 	"html",
 	"css",
 	"scss",
@@ -20,8 +19,10 @@ return {
 	"glimmer",
 
 	-- other
+	"json",
+	"yaml",
+
 	"query",
 	"markdown",
 	"markdown_inline",
-	"yaml",
 }

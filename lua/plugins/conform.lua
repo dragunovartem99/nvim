@@ -1,8 +1,3 @@
-local formatters = require("config.formatters")
-
--- both LSPs and CLI formatters are used
-local conform_by_ft = "formatters_by_ft"
-
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -18,17 +13,15 @@ return {
 		},
 	},
 	opts = {
-		[conform_by_ft] = {
+		formatters_by_ft = {
 			-- nvim
 			lua = { "stylua" },
 
 			-- linux
 			c = { "clang-format" },
-			sh = { "shfmt" },
+			sh = { "shellcheck", "shfmt" },
 
 			-- web
-			json = { "prettier" },
-			jsonc = { "prettier" },
 			html = { "prettier" },
 			css = { "prettier" },
 			scss = { "prettier" },
@@ -37,8 +30,10 @@ return {
 			vue = { "prettier" },
 
 			-- other
+			json = { "prettier" },
+			jsonc = { "prettier" },
 			yaml = { "prettier" },
 		},
-		formatters,
+		formatters = require("config.formatters"),
 	},
 }
