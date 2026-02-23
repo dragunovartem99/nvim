@@ -14,4 +14,7 @@ return {
 	vue_ls = {},
 	eslint = {},
 	stylelint_lsp = require("config.lsps.stylelint_lsp"),
+
+	-- other
+	jsonls = {},
 }
