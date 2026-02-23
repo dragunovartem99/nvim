@@ -2,7 +2,7 @@
 
 Minimalist neovim config based on [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager
 
-<img src="https://github.com/user-attachments/assets/76a138b8-4785-454a-902e-5db63a1e395a" width="640">
+<img src="https://github.com/user-attachments/assets/dac7546c-be85-4db2-9bc7-124954747db4" alt="Screenshot of personal development environment" width="640">
 
 ## Inspired by
 
