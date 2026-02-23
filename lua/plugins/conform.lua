@@ -1,3 +1,7 @@
+local function web_formatter()
+	return { "oxfmt", "prettier", stop_after_first = true }
+end
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -22,17 +26,17 @@ return {
 			sh = { "shellcheck", "shfmt" },
 
 			-- web
-			html = { "prettier" },
-			css = { "prettier" },
-			scss = { "prettier" },
-			javascript = { "prettier" },
-			typescript = { "prettier" },
-			vue = { "prettier" },
+			html = web_formatter(),
+			css = web_formatter(),
+			scss = web_formatter(),
+			javascript = web_formatter(),
+			typescript = web_formatter(),
+			vue = web_formatter(),
 
 			-- other
-			json = { "prettier" },
-			jsonc = { "prettier" },
-			yaml = { "prettier" },
+			json = web_formatter(),
+			jsonc = web_formatter(),
+			yaml = web_formatter(),
 		},
 		formatters = require("config.formatters"),
 	},
