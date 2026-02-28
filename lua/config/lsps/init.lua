@@ -5,7 +5,7 @@ return {
 
 	-- linux
 	clangd = {},
-	bashls = {},
+	bashls = require("config.lsps.bashls"),
 
 	-- web
 	emmet_language_server = {},
