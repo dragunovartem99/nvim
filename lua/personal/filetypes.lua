@@ -1,5 +1,6 @@
 vim.filetype.add({
 	filename = {
-		[".env"] = "dotenv",
+		[".hbs"] = "glimmer",
+		[".ejs"] = "embedded_template",
 	},
 })
