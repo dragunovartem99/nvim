@@ -3,4 +3,7 @@ vim.filetype.add({
 		[".hbs"] = "glimmer",
 		[".ejs"] = "embedded_template",
 	},
+	pattern = {
+		["%.env%.?.*"] = "sh",
+	},
 })
