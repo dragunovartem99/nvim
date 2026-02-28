@@ -5,6 +5,16 @@ return {
 	config = function()
 		require("nvim-treesitter").install(filetypes)
 
+		vim.filetype.add({
+			extension = {
+				["hbs"] = "glimmer",
+				["ejs"] = "embedded_template",
+			},
+			pattern = {
+				["%.env%.?.*"] = "sh",
+			},
+		})
+
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = filetypes,
 

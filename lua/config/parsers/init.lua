@@ -17,6 +17,7 @@ return {
 	"vue",
 	"graphql",
 	"glimmer",
+	"embedded_template",
 
 	-- other
 	"json",
