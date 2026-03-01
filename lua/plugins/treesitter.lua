@@ -7,6 +7,7 @@ return {
 
 		vim.filetype.add({
 			extension = {
+				["styl"] = "css",
 				["hbs"] = "glimmer",
 				["ejs"] = "embedded_template",
 			},
