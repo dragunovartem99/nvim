@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
-vim.keymap.set("n", "<leader>q", vim.cmd.Ex, { desc = "[Q]uit" })
+vim.keymap.set("n", "<leader>E", vim.cmd.Ex, { desc = "[E]xit" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("personal-lsp-attach", { clear = true }),
