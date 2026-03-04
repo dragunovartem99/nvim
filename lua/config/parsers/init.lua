@@ -26,4 +26,7 @@ return {
 	"query",
 	"markdown",
 	"markdown_inline",
+
+	"go",
+	"dart",
 }
