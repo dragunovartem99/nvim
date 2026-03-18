@@ -15,5 +15,5 @@
   "telescope.nvim": { "branch": "master", "commit": "5255aa27c422de944791318024167ad5d40aad20" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "ecce93ff7db4461e942c03e0fcc64bd785df4057" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
-  "tomorrow-night.nvim": { "branch": "main", "commit": "2150520e0f6466eba57d8f13cd771499bd10ed50" }
+  "tomorrow-night.nvim": { "branch": "main", "commit": "d42e00e531dbe26f338308829c7524ce36dd6ee4" }
 }
