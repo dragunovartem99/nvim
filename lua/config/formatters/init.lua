@@ -5,5 +5,6 @@ return {
 	["shellcheck"] = {},
 
 	-- web
-	["prettier"] = require("config.formatters.prettier"),
+	["prettier"] = require("config.formatters.web"),
+	["oxfmt"] = require("config.formatters.web"),
 }
