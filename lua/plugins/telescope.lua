@@ -20,9 +20,38 @@ return {
 			end, { desc = "Telescope: " .. desc })
 		end
 
-		-- Help
+		-- "Everyday" Search
 
-		map("fh", "[F]ind [H]elp", "help_tags")
+		map("ff", "[F]ind [F]iles", "find_files")
+		map("fg", "[F]ind [G]rep", "live_grep")
+
+		-- Hidden Search
+
+		map("fhg", "[F]ind [H]idden [G]rep", "live_grep", {
+			additional_args = { "--hidden", "--no-ignore" },
+			prompt_title = "Live (Hidden) Grep",
+		})
+
+		map("fhf", "[F]ind [H]idden [F]iles", "find_files", {
+			hidden = true,
+			no_ignore = true,
+			no_ignore_parent = true,
+			prompt_title = "Find (Hidden) Files",
+		})
+
+		-- Time Travelling
+
+		map("fo", "[F]ind [O]ld Files", "oldfiles")
+		map("fr", "[F]ind [R]esume", "resume")
+
+		-- Development
+
+		map("fd", "[F]ind [D]iagnostics", "diagnostics")
+		map("fv", "[F]ind [V]CS", "git_files")
+
+		-- Info
+
+		map("ft", "[F]ind Help [T]ags", "help_tags")
 		map("fk", "[F]ind [K]eymaps", "keymaps")
 		map(
 			"fn",
@@ -30,26 +59,5 @@ return {
 			"find_files",
 			{ cwd = vim.fn.stdpath("config"), prompt_title = "Find Neovim Files" }
 		)
-
-		-- Debug
-
-		map("fd", "[F]ind [D]iagnostics", "diagnostics")
-
-		-- Time Travelling
-
-		map("fo", "[F]ind [O]ld Files", "oldfiles")
-		map("fr", "[F]ind [R]esume", "resume")
-
-		-- "Everyday" Search
-
-		map("ff", "[F]ind [F]iles", "find_files")
-		map("fv", "[F]ind [V]CS", "git_files")
-		map("fg", "[F]ind [G]rep", "live_grep")
-		map("fa", "[F]ind [A]ll", "find_files", {
-			hidden = true,
-			no_ignore = true,
-			no_ignore_parent = true,
-			prompt_title = "Find Files (All)",
-		})
 	end,
 }
