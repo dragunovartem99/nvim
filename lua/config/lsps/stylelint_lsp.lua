@@ -1,3 +1,7 @@
 return {
-	settings = { stylelintplus = { autoFixOnSave = true } },
+	settings = {
+		stylelint = {
+			validate = { "css", "postcss", "scss", "stylus", "vue" },
+		},
+	},
 }
