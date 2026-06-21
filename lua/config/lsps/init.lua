@@ -14,7 +14,7 @@ return {
 	vue_ls = {},
 
 	oxlint = {},
-	eslint = {},
+	eslint = require("config.lsps.eslint"),
 	stylelint_lsp = require("config.lsps.stylelint_lsp"),
 
 	-- other
