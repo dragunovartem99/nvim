@@ -28,6 +28,7 @@ return {
 			javascript = { "oxfmt" },
 			typescript = { "oxfmt" },
 			vue = { "oxfmt" },
+			astro = { "prettier" },
 
 			-- other
 			json = { "oxfmt" },

@@ -15,6 +15,7 @@ return {
 	"javascript",
 	"typescript",
 	"vue",
+	"astro",
 	"graphql",
 	"glimmer",
 	"embedded_template",
