@@ -12,7 +12,10 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
+		dependencies = { "mason-org/mason.nvim" },
 		opts = {
+			-- ./lspconfig.lua enables servers explicitly
+			automatic_enable = false,
 			ensure_installed = vim.tbl_filter(function(server)
 				return not manually_installed[server]
 			end, vim.tbl_keys(servers)),
@@ -20,6 +23,7 @@ return {
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		dependencies = { "mason-org/mason.nvim" },
 		opts = { ensure_installed = vim.tbl_keys(formatters) },
 	},
 }
