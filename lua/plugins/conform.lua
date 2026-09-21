@@ -29,6 +29,7 @@ return {
 			typescript = { "oxfmt" },
 			vue = { "oxfmt" },
 			astro = { "prettier" },
+			svelte = { "prettier" },
 
 			-- other
 			json = { "oxfmt" },

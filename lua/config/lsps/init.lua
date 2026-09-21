@@ -13,6 +13,7 @@ return {
 	ts_ls = require("config.lsps.ts_ls"),
 	vue_ls = {},
 	astro = {},
+	svelte = {},
 
 	oxlint = {},
 	eslint = require("config.lsps.eslint"),

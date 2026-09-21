@@ -1,7 +1,7 @@
 return {
 	settings = {
 		stylelint = {
-			validate = { "css", "postcss", "scss", "stylus", "vue", "astro" },
+			validate = { "css", "postcss", "scss", "stylus", "vue", "astro", "svelte" },
 		},
 	},
 }
