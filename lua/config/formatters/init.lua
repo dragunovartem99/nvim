@@ -1,4 +1,7 @@
 return {
+	-- nvim
+	["stylua"] = {},
+
 	-- linux
 	["clang-format"] = require("config.formatters.clang-format"),
 	["shfmt"] = require("config.formatters.shfmt"),
