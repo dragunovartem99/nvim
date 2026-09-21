@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>x", function()
 	local type = vim.bo.filetype
-	local content = vim.fn.expand("%")
+	local content = vim.fn.shellescape(vim.fn.expand("%"))
 
 	local run = function(command)
 		local output = vim.fn.system(command)
@@ -8,7 +8,8 @@ vim.keymap.set("n", "<leader>x", function()
 	end
 
 	if type == "c" then
-		run("gcc " .. content .. " -o /tmp/x && /tmp/x && rm /tmp/x")
+		local binary = vim.fn.shellescape(vim.fn.tempname())
+		run("gcc " .. content .. " -o " .. binary .. " && " .. binary .. "; rm -f " .. binary)
 	elseif type == "javascript" then
 		run("node " .. content)
 	elseif type == "typescript" then
@@ -23,7 +24,7 @@ vim.keymap.set("n", "<leader>x", function()
 	elseif type == "python" then
 		run("python3 " .. content)
 	elseif type == "lua" then
-		vim.cmd("luafile " .. content)
+		vim.cmd.luafile("%")
 	else
 		print("Cannot execute " .. type .. " file!")
 	end
