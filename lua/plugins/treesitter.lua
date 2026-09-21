@@ -1,9 +1,9 @@
-local filetypes = require("config.parsers")
+local parsers = require("config.parsers")
 
 return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()
-		require("nvim-treesitter").install(filetypes)
+		require("nvim-treesitter").install(parsers)
 
 		vim.filetype.add({
 			extension = {
@@ -16,11 +16,19 @@ return {
 			},
 		})
 
+		-- Parser names differ from filetypes (e.g. bash -> sh, vimdoc -> help)
+		local filetypes = {}
+		for _, parser in ipairs(parsers) do
+			vim.list_extend(filetypes, vim.treesitter.language.get_filetypes(parser))
+		end
+
 		vim.api.nvim_create_autocmd("FileType", {
+			group = vim.api.nvim_create_augroup("personal-treesitter", { clear = true }),
 			pattern = filetypes,
 
 			callback = function()
-				vim.treesitter.start()
+				-- Parser may still be installing on first launch
+				pcall(vim.treesitter.start)
 			end,
 		})
 	end,
