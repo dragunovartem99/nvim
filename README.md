@@ -4,6 +4,13 @@ Minimalist neovim config based on [lazy.nvim](https://github.com/folke/lazy.nvim
 
 <img src="https://github.com/user-attachments/assets/dac7546c-be85-4db2-9bc7-124954747db4" alt="Screenshot of personal development environment" width="640">
 
+## Installation
+
+```sh
+git clone https://github.com/dragunovartem99/nvim ~/.config/nvim
+nvim  # lazy.nvim installs the plugins on first start
+```
+
 ## Inspired by
 
 - [Kickstart config](https://github.com/nvim-lua/kickstart.nvim)
